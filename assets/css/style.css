@@ -29,6 +29,7 @@ a{
 
 /*WHEEL*/
 #wheel{
+	margin: auto;
 	width:250px;
 	height:250px;
 	border-radius:50%;	
@@ -268,23 +269,6 @@ opacity:0.1;
   -webkit-animation: hh 0.1s; /* Chrome, Safari, Opera */
     animation: hh 0.1s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
