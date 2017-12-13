@@ -1,0 +1,19 @@
+h1 {
+	text-align: center;
+}
+
+.wheelButtons {
+	margin:auto;
+	width: 95%;
+	
+}
+
+.btn-lg {
+	height: 20%;
+	padding: 50px 50px;
+	font-size: 30px;
+}
+
+#rva {
+	font-family: 'Monoton', cursive;
+}
