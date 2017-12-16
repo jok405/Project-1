@@ -36,7 +36,7 @@ $(document).ready(function(){
 					
 				var aoY = t.offset().top;
 				$("#txt").html(aoY);
-				console.log(aoY);
+				//console.log(aoY);
 				
 				/*23.7 is the minumum offset number that 
 				each section can get, in a 30 angle degree.
@@ -44,7 +44,7 @@ $(document).ready(function(){
 				that it has a 30 degree angle and therefore, 
 				exactly aligned with the spin btn*/
 				if(aoY < 23.89){
-					console.log('<<<<<<<<');
+					//console.log('<<<<<<<<');
 					$('#spin').addClass('spin');
 					setTimeout(function () { 
 						$('#spin').removeClass('spin');
