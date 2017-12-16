@@ -1,4 +1,5 @@
 
+
   
 // Zomato API that pulls restaraunt information 
 var queryURL = "https://developers.zomato.com/api/v2.1/cities?q=richmond";
@@ -19,26 +20,36 @@ var restArray = [];
 // ajax call gives us 20 local restaraunts
 $.ajax(settings).done(function (response) {
   for (var i = 0; i < 19; i++) {
-    console.log(response.restaurants[i].restaurant.name);
+    // console.log(response.restaurants[i].restaurant.name);
     // Pushes our 20 restaraunts into our restArray array 
     restArray.push(response.restaurants[i].restaurant.name);
   }
 
-  console.log(restArray);
+  // console.log(restArray);
   // Randomizes through our array and pulls one option
   var randomRest = restArray[Math.floor(Math.random() * 19)];
  // here is our radom restaraunt, need to push to a card 
 console.log(randomRest);
+$("#rest-txt").text(randomRest);
+
+
+$(document).on('click', '#dinner', function(spin) {
+ 
+  console.log(randomRest);
 });
 
-
+$(document).on('click', '#both', function(spin) {
+  console.log(randomRest);
+  
+});
+});
 // Here is our movie API that pulls our movie infor based on zip code
  // construct the url with parameter values
-         var apikey = "f2rwg4z4xzsj7vz3mhnfq9fn";
+         var apikey = "m8zfezvnzgt2uda46zuqe9e7";
          var baseUrl = "http://data.tmsapi.com/v1.1";
          var showtimesUrl = baseUrl + '/movies/showings';
          var zipCode = "23222";
-        var d = new Date();
+         var d = new Date();
          var today = d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate();
           
          $(document).ready(function() {
@@ -54,19 +65,26 @@ console.log(randomRest);
             dataType: "jsonp",
            });
          });
-          
+
+        var movieArray = [];
+
          // callback to handle the results
-         function dataHandler(data) {
-          $(document.body).append('<p>Found ' + data.length + ' movies showing within 5 miles of ' + zipCode+':</p>');
-          var movies = data.hits;
-          $.each(data, function(index, movie) {
-            var movieData = '<div class="tile">'
-            movieData += movie.title;
-            console.log(movie.title);
-            if (movie.ratings) { movieData += ' (' + movie.ratings[0].code + ') </div>' };
-            $(document.body).append(movieData);
-          });
+           function dataHandler(data) {
+           // $(document.body).append('<p>Found ' + data.length + ' movies showing within 5 miles of ' + zipCode+':</p>');
+           // var movies = data.hits;
+           for (var i = 0; i < data.length; i++) {
+             console.log(data[i]);
+            movieArray.push(data[i].title);
+           }
+           // Here is the random movie pulled from the Movie Array 
+           var randomMov = movieArray[Math.floor(Math.random() * data.length)];
+           console.log(randomMov);
+           $("#act-txt").text(randomMov);
+           $(document).on('click', '#activity', function(spin) {
+  console.log(randomMov)
+});
+$(document).on('click', '#both', function(spin) {
+  
+  console.log(randomMov);
+});
          }
-
-$("#text").text("randomRest");
-

@@ -1,4 +1,6 @@
-
+#txt {
+	text-align: center;
+}
 *{	margin:0;	padding:0; }
 
 body{
@@ -13,7 +15,12 @@ a{
 }
 
 
-
+.card-header {
+	text-align: center;
+}
+.card {
+	background-color: black;
+}
 
 /*WRAPPER*/
 #wrapper{ 

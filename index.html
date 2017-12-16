@@ -25,9 +25,9 @@
 	</div>
 	<!-- Out buttons for Diner - Event or Both  -->
 	<div class="wheelButtons">
-		<button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-cutlery" aria-hidden="true"></i>  Dinner?</button>
-		<button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-bicycle" aria-hidden="true"></i>  Activity?</button>
-		<button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-thumbs-up" aria-hidden="true"></i>  Both?</button>
+		<button id="dinner" type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-cutlery" aria-hidden="true"></i>  Dinner?</button>
+		<button id="activity" type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-bicycle" aria-hidden="true"></i>  Activity?</button>
+		<button id="both" type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-thumbs-up" aria-hidden="true"></i>  Both?</button>
 	</div>
 
             
@@ -54,11 +54,26 @@
             
             <div id="shine"></div>
         </div>
-        
+ </div>       
         <br>
-        <div id="txt"></div>
+    		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">	
+				<div class="card">
+  					<div class="card-header">Like it or not, this is what you're doing</div>
+ 					<div class="card-body">
+ 						
+ 						<div id="rest-txt" style="color:white"></div>
+ 						<div id="act-txt" style="color:white"></div>
+ 						<div id="both-txt" style="color:white"></div>
+ 					</div> 
+  				</div>
+			</div>
+		</div>
         
-  </div>
+        
+  
 
 <!--JavaScript-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
