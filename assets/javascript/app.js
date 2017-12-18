@@ -48,8 +48,8 @@ function display() {
 };
 function randomMovie() {
 	//randomMov = "Red Dawn";
-	randomMov = movieArray[Math.floor(Math.random() * data.length)]; //////////////////////////////////data.length
-	console.log('randomMovieFunction')
+	randomMov = movieArray[Math.floor(Math.random() * movieArray.length)]; //////////////////////////////////data.length
+	console.log(movieArray)
 }	
 function timer() {
 			setTimeout(display, 6000)
@@ -125,8 +125,8 @@ $.ajax({
     });
          //});
 function dataHandler(data) {
-    for (var i = 0; i < data.length; i++) {
-        movieArray.push(data[i].title);
+    for (var j = 0; j < data.length; j++) {
+        movieArray.push(data[j].title);
         	}
         }
    
@@ -144,7 +144,6 @@ $(document).ready(function() {
 		bothButton = true;
 		randomRestaurant ();
 		randomMovie();//$("#rest-txt").text("Watch " + randomMov + " and eat at " + randomRest);
-  		console.log(randomMov);
 		});
 	$('#spin').click(function(){
 		spin();
