@@ -23,6 +23,13 @@ a{
 	color:#34495e;	
 }
 
+#logo {
+	margin: auto;
+	width: 100%;
+	font-size: 143px;
+	text-align: center;
+}
+
 
 .card-header {
 	text-align: center;
