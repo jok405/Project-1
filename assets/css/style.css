@@ -1,8 +1,10 @@
 .results {
 	text-align: center;
 }
-#txt {
-	text-align: center;
+
+
+#rest-txt{
+	font-size:40px;
 }
 *{	margin:0;	padding:0; }
 
@@ -12,9 +14,10 @@ body{
 	font-size:18px;
 	font-family: 'Exo 2', sans-serif;
 }
-.movie {
+.movie, #snark {
 	color:white;
 	text-align: center;
+	font-size:40px;
 }
 a{
 	color:#34495e;	
@@ -37,6 +40,7 @@ a{
 
 #txt{
 	color:#eaeaea;	
+	text-align: center;
 }
 
 
@@ -299,7 +303,7 @@ h1 {
 .btn-lg {
 	height: 20%;
 	padding: 50px 50px;
-	font-size: 30px;
+	font-size: 40px;
 }
 
 #rva {
