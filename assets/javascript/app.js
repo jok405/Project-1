@@ -1,3 +1,4 @@
+// Hi Tasha!
 var movieArray = [];
 var data = [];
 var apikey = "mvce6zcsew5md4qhrgqzgjuw";
