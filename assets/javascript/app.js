@@ -200,12 +200,18 @@ $(document).ready(function() {
 //randomMov = "Red Dawn";
     $(document).on('click', '#activity', function(spin) {
     	activityButton = true;//$("#rest-txt").text(randomMov);
+    	document.getElementById("both").style="opacity: 1";
+	 	document.getElementById("dinner").style="opacity: 1";
+	 	document.getElementById("activity").style="opacity: 0.6";
   		console.log(randomMov)
   		randomMovie();
   		
 		});
 	$(document).on('click', '#both', function(spin) {
 		bothButton = true;
+		document.getElementById("dinner").style="opacity: 1";
+	 	document.getElementById("activity").style="opacity: 1";
+	 	document.getElementById("both").style="opacity: 0.6";
 		randomRestaurant ();
 		randomMovie();//$("#rest-txt").text("Watch " + randomMov + " and eat at " + randomRest);
 		});
@@ -214,6 +220,9 @@ $(document).ready(function() {
 		});
 	$(document).on('click', '#dinner', function(spin) {
 	 	dinnerButton = true;
+	 	document.getElementById("activity").style="opacity: 1";
+	 	document.getElementById("both").style="opacity: 1";
+	 	document.getElementById("dinner").style="opacity: 0.6";
 	 	randomRestaurant ();//$("#rest-txt").text(randomRest);
 	 	});
 });
