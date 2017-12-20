@@ -4,7 +4,7 @@ var apikey = "mvce6zcsew5md4qhrgqzgjuw";
 //var apikey = "f2rwg4z4xzsj7vz3mhnfq9fn";
 //var apikey = "m8zfezvnzgt2uda46zuqe9e7";
 //var apikey = 'fakekey';
-var baseUrl = "http://data.tmsapi.com/v1.1";
+var baseUrl = "https://data.tmsapi.com/v1.1";
 var showtimesUrl = baseUrl + '/movies/showings';
 var zipCode = "23222";
 var d = new Date();
@@ -17,15 +17,12 @@ var activityButton = false;
 var bothButton = false;
 var degree = 1800;
 var restArray = []; 
-var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=1219&entity_type=city&count=100"
-//var queryURL = "https://developers.zomato.com/api/v2.1/cities?q=richmond";
+var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=1219&entity_type=city&count=100";
 var queryURLl = "0356c6221d55cd4bfb3231fee709ccec";
 var settings = {
   "async": true,
   "crossDomain": true,
   "url": "https://developers.zomato.com/api/v2.1/search?entity_id=1219&entity_type=city&count=100",
-
-  //"url": "https://developers.zomato.com/api/v2.1/search?entity_id=1219&entity_type=city&q=restaurants&count=20",
   "method": "GET",
   "headers": {
     "user-key": "0356c6221d55cd4bfb3231fee709ccec",
@@ -52,6 +49,7 @@ function display() {
 	} 
 	if (activityButton == true) {
 		$("#rest-txt").text("Watch " + randomMov.title);
+		activityButton = false;
 						//$("#movieImg-img").val("Watch " + randomMov);
 						var movieDiv = $("<div class='movie'>");
 						//var description = randomMov.longDescription;
@@ -66,7 +64,7 @@ function display() {
 
           				// Putting the entire movie above the previous movies
           				$("#movies-Info").append(movieDiv);
-						activityButton = false;
+						
 						$(".movie").hide();				
           				$("#rest-txt").click(function(){
     						$(".movie").toggle();
@@ -194,7 +192,6 @@ function dataHandler(data) {
         movieArray.push(data[j]);
         	}
         }
-   ;
         //Here is the random movie pulled from the Movie Array 
     //randomMov = movieArray[Math.floor(Math.random() * data.length)];
 	//randomMovie()
