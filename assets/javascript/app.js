@@ -121,10 +121,18 @@ function spin () {
 		$(".movie").text("");
 		//add 1 every click
 		clicks ++;
-		
+
+		/*Wheel animation and citation
+
+		Title: Trivia Crack Inspired - Spinning Wheel
+		Author: Andre Cortellini
+		Date: February 20, 2015
+		Code version: N/A
+		Availability: Codepen url: https://codepen.io/AndreCortellini/pen/vERwmL
+
 		/*multiply the degree by number of clicks
-	  generate random number between 1 - 360, 
-    then add to the new degree*/
+	  	generate random number between 1 - 360, 
+    	then add to the new degree*/
 		var newDegree = degree*clicks;
 		var extraDegree = Math.floor(Math.random() * (360 - 1 + 1)) + 1;
 		totalDegree = newDegree+extraDegree;
@@ -166,6 +174,7 @@ function spin () {
 			noY = t.offset().top;
 			
 		});
+		/*End of citation*/
 	}
 
 

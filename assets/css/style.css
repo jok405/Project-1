@@ -6,6 +6,7 @@
 #rest-txt{
 	font-size:40px;
 }
+
 *{	margin:0;	padding:0; }
 
 body{
@@ -44,7 +45,14 @@ a{
 }
 
 
-/*WHEEL*/
+/*WHEEL
+Wheel animation
+Title: Trivia Crack Inspired - Spinning Wheel
+Author: Andre Cortellini
+Date: February 20, 2015
+Code version: N/A
+Availability: Codepen url: https://codepen.io/AndreCortellini/pen/vERwmL
+*/
 #wheel{
 	margin: auto;
 	width:250px;
@@ -284,11 +292,7 @@ opacity:0.1;
     animation: hh 0.1s;
 }
 
-
-
-
-
-
+/*End of citation */
 
 h1 {
 	text-align: center;
@@ -309,10 +313,4 @@ h1 {
 #rva {
 	font-family: 'Monoton', cursive;
 }
-
-/* background animation experiment*/
-
-
-
-/* Jared's input 12.14.17 */
 
